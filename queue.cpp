@@ -96,6 +96,7 @@ int main()
             break;
 
         case 4:
+            cout << "Proccess exited" << endl;
             return 0;
 
         default:
