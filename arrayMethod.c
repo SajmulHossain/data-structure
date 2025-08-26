@@ -5,8 +5,10 @@
 int stack[4];
 int top = -1;
 
-void push() {
-    if (top >= size - 1) {
+void push()
+{
+    if (top >= size - 1)
+    {
         printf("Stack Overflow!!!!\n");
         return;
     }
@@ -18,17 +20,23 @@ void push() {
     top++;
     stack[top] = value;
 }
-void pop() {
-    if (top < 0) {
+void pop()
+{
+    if (top < 0)
+    {
         printf("Stack underflow!!!\n");
         return;
     }
     top--;
 }
-void show() {
-    if (top < 0) {
+void show()
+{
+    if (top < 0)
+    {
         printf("Stack is empty!!!\n");
-    } else {
+    }
+    else
+    {
         printf("Stack value is: ");
         for (int i = 0; i <= top; i++)
         {
@@ -38,13 +46,16 @@ void show() {
     printf("\n");
 }
 
-int main() {
-    while (1) {
+int main()
+{
+    while (1)
+    {
         int choice;
         printf("1. Push \n 2.Pop \n 3. Show \n 4. Exit \n Enter your choice \n");
         scanf("%d", &choice);
 
-        switch (choice) {
+        switch (choice)
+        {
         case 1:
             push();
             break;

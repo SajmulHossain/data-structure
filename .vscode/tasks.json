@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build & Run C/C++",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "file=\"$1\"; exe=\"${file%.*}.exe\"; g++ \"${file//\\\\//}\" -o \"$exe\" && \"$exe\"",
+        "${file}"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
