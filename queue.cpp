@@ -22,18 +22,13 @@ void enqueue()
 
     if (top >= size - 1)
     {
-        // if(front < rear) {
-        std::cout << "Queue overflow!!!" << std::endl;
-        // }
+        cout << "Queue overflow!!!" << endl;
 
         return;
     }
 
     rear++;
     top++;
-    // if(front > rear) {
-    //     front = 0;
-    // }
     cout << "Enter a value:" << endl;
     cin >> value;
     queue[rear] = value;
@@ -42,7 +37,7 @@ void dequeue()
 {
     if (top < 0)
     {
-        std::cout << "Queue underflow!!!" << std::endl;
+        cout << "Queue underflow!!!" << endl;
         return;
     }
 
@@ -52,23 +47,18 @@ void dequeue()
 void display()
 {
     int loopEnd = rear;
-    std::cout << "The queue is:";
+    cout << "The queue is:";
     if (top < 0)
     {
-        std::cout << " EMPTY" << std::endl;
+        cout << " EMPTY" << endl;
     }
     else
     {
-        std::cout << std::endl;
+        cout << endl;
     }
-    // if (front > rear)
-    // {
-    //     i = 0;
-    //     loopEnd = size - 1;
-    // }
     for (i = front; i <= loopEnd; i++)
     {
-        std::cout << queue[i] << "\t";
+        cout << queue[i] << "\t";
     }
 }
 
@@ -77,7 +67,6 @@ int main()
     while (true)
     {
         cout << "\n1. Enqueue \n2. Dequeue\n3. Display\n 4.EXIT" << endl;
-        // std::cout << "Top: " << top << " front: " << front << " rear: " << rear << std::endl;
         int choice;
         cout << "Enter your choice\n";
         cin >> choice;
@@ -100,7 +89,7 @@ int main()
             return 0;
 
         default:
-            std::cout << "Invalid input" << std::endl;
+            cout << "Invalid input" << endl;
             break;
         }
     }
